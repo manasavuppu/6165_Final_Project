@@ -1,4 +1,15 @@
-# 6165_Final_Project
- Deep Learning/Gen AI
- 
-Preprocessing: Clear description of what analysis has been done on the data is in the ipynb files. 
+# Personalized AI Writing Assistant
+
+## 📄 Project Documentation Notice
+
+Please make sure to first **read the `Final_model_documentation.docx`** file provided.
+
+✅ In the documentation, we have:
+- **Addressed all feedback and comments** related to the baseline model.
+- **Detailed the documentation for Phase 2** of our project.
+- **Outlined a clear roadmap** for Phase 2, including next steps, planned improvements, and broader goals.
+
+The `.docx` file provides complete context before reviewing the code, models, or datasets.
+
+---
+
