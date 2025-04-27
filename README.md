@@ -9,7 +9,7 @@ Step 1: Please **read the `Final_model_documentation.docx`** file provided.
 - **Detailed the documentation for Phase 2** of our project.
 - **Outlined a clear roadmap** for Phase 2, including next steps, planned improvements, and broader goals.
 
-The `Final_model_documentation.docx` file provides complete context before reviewing the code, models, or datasets.
+The `Final_model_documentation.docx` file provides complete context so, please read this before reviewing the code, models, or datasets.
 
 ---
 
