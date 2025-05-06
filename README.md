@@ -1,5 +1,5 @@
-# DSBA 6165 AI and Deep Learning Project (Spring 2025)
-## 👥 Group 8 – Personalized AI Writing Assistant
+## Personalized AI Writing Assistant
+## DSBA 6165 – AI and Deep Learning Project (Spring 2025)
 
 🔍 Project Overview
 This project aims to develop a multi-model AI-powered writing assistant capable of generating both short-form (quotes, reflections) and long-form (SOPs, essays) texts in the unique writing style of the user. The solution leverages style conditioning, semantic alignment, and authorship verification to ensure stylistic authenticity and minimal hallucination.
