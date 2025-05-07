@@ -10,12 +10,14 @@ Generating high-quality personalized writing remains one of the most complex and
 To build an AI assistant capable of generating emotionally resonant, style-aligned writing that reflects the personal tone of the user, while also evaluating generated content using an authorship classifier.
 
 ### Folder structure
-Personalized AI Writing Assistant
+<pre> ```Personalized AI Writing Assistant
+│
 ├── 📁 baselineModels/ # Short form text models GPT-2, BART, and T5 
 ├── 📁 finalModels/ # Long form text models TinyLlama, Meta Llama, Mistral
 ├── 📁 preprocessing/ # Scripts and notebooks for data cleaning, OCR, tagging
 ├── 📁 presentation/ # Final project slides, diagrams, and visual materials
-├── 📁 report/ # Final written report 
+├── 📁 report/ # Final written report ``` </pre>
+
 
 ### Methods Overview
 - **Data Collection**: Curated personalized dataset including quotes, SOPs, blogs, essays and academic letters.
