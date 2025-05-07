@@ -1,61 +1,40 @@
 ## Personalized AI Writing Assistant
-### DSBA 6165 – AI and Deep Learning Project (Spring 2025)
 
-🔍 Project Overview
-This project aims to develop a multi-model AI-powered writing assistant capable of generating both short-form (quotes, reflections) and long-form (SOPs, essays) texts in the unique writing style of the user. The solution leverages style conditioning, semantic alignment, and authorship verification to ensure stylistic authenticity and minimal hallucination.
+## DSBA 6165 – AI & Deep Learning (Spring 2025)
+### Authors: Lasya Reddy Edunuri, Manasa Sree Vuppu, Brinda Vijayakumar
 
-📁 Project Structure
-📦 AI-Writing-Assistant/
-├── 📂 report/                   # Final report and supplementary documentation
-│   ├── 6165_Final_Report_Group_8.pdf
-│   ├── Final_model_documentation.docx
-├── 📂 models/                   # Fine-tuned and baseline model scripts
-│   ├── gpt2_style_model.py
-│   ├── bart_longform_generator.py
-│   ├── t5_text_rewriter.py
-│   └── authorship_classifier.py
-├── 📂 data/                     # Preprocessed datasets (quotes, blogs, SOPs)
-│   ├── quotes_personal.csv
-│   ├── sop_samples.csv
-│   └── author_labels.csv
-├── 📂 notebooks/               # EDA, training logs, metric visualizations
-│   ├── shortform_generation.ipynb
-│   └── authorship_eval.ipynb
-├── README.md                   # Project summary and usage guide
+## Introduction
+Generating high-quality personalized writing remains one of the most complex and omnipresent problems in today’s world of generative writing. Despite the growth and rapid development of Large Language Models (LLMs), generating text that consistently reflects an individual’s unique style and tone, preserving the nature of their personal voice, remains an open challenge. This project presents an end-to-end system for a Personalized AI Writing Assistant designed to emulate an individual’s unique voice across both short-form and long-form content.
 
-🔧 Technologies & Models Used
-| Purpose                   | Model                               | Notes                                       |
-| ------------------------- | ----------------------------------- | ------------------------------------------- |
-| Short-form generation     | GPT-2 (LoRA fine-tuned)             | Controlled via metadata & few-shot examples |
-| Long-form generation      | BART, Meta LLaMA, Mistral           | Chosen based on fluency and coherence       |
-| Style rewriting           | T5 + TextSETTR                      | For tone-specific quote transformation      |
-| Evaluation                | BERTScore, SpaCy, Custom Classifier | Ensures semantic and stylistic fidelity     |
-| Authorship Classification | Logistic Regression                 | Predicts if text matches user's style       |
+## Project Objective
+To build an AI assistant capable of generating emotionally resonant, style-aligned writing that reflects the personal tone of the user, while also evaluating generated content using an authorship classifier.
 
-🎯 Key Features
-Style Conditioning: Metadata tags like tone, theme, and formality help guide generation.
+## Methods Overview
+- **Data Collection**: Curated personalized dataset including quotes, SOPs, blogs, essays and academic letters.
+- **Short-Form Generation**:
+  - GPT-2 with static prompting
+  - BART with STYLEMC-based reranking
+  - T5 with few-shot prompting
+  - T5 with metadata conditioning
+- **Long-Form Generation**:
+  - Fine-tuned TinyLlama 1.1B
+  - Fine-tuned Meta Llama 3.2 3B with prompt augmentation
+  - Fine-tuned Mistral 7B with instruction-based SOP modeling
+- **Evaluation**:
+  - Quantitative: BERTScore, ROUGE, TF-IDF authorship classifier
+  - Qualitative: Human assessment of tone, structure, fluency
 
-Few-shot Prompting: Stabilizes model behavior using examples.
+## Conclusion
+Our multi-stage pipeline effectively mimics authorial voice using LLMs and logistic regression. Metadata-aware conditioning, prompt engineering, LoRA fine-tuning and stylistic reranking greatly improved both coherence and personalization. Classifier scores confirmed stylistic fidelity in most generations.
 
-Style Verification: Ensures generated content matches the author's signature style.
+## Future Work
+We aim to expand and diversify the dataset by incorporating more long-form personal writing samples such as essays, letters, and academic reflections and extend this system into a real-time writing assistant embedded in platforms like Google Docs. Future iterations will explore multimodal inputs (e.g., voice notes, video transcripts) to capture broader stylistic signals. 
 
-Custom Post-Processing: Removes hallucinations and ensures emotional coherence.
+## Main References
+- Khan, A., Wang, A., Hager, S. and Andrews, N. (2023). Learning to Generate Text in Arbitrary Writing Styles. arXiv preprint arXiv:2312.17242.
+- Riley, P., Constant, N., Guo, M., Kumar, G., Uthus, D. and Parekh, Z. (2020). TextSETTR: Few-shot text style extraction and tunable targeted restyling. arXiv preprint arXiv:2010.03802.
+- Sawicki, P., Grzes, M., Góes, L.F., Brown, D., Peeperkorn, M., Khatun, A. and Paraskevopoulou, S. (2023). On the power of special-purpose GPT models to create and evaluate new poetry in old styles.
+- Wei, J., Bosma, M., Zhao, V. Y., Guu, K., Yu, A. W., Lester, B., ... & Le, Q. V. (2021). Finetuned language models are zero-shot learners. arXiv preprint arXiv:2109.01652.
 
-📊 Evaluation Highlights
-BERTScore (F1): 0.84 on short-form quotes
-
-Classifier Accuracy: 88.5% on authorship validation
-
-Human Evaluation: 9/10 testers agreed generated content matched the author’s style
-
-🧠 Future Scope
-Add reinforcement learning with human feedback (RLHF) for emotional alignment.
-
-Expand authorship classifier to support multi-author confusion matrix.
-
-Explore integration with web UIs like Streamlit or Gradio for public demo.
-
-🙌 Acknowledgments
-Special thanks to Prof. Fox for project guidance.
-
-Base models: HuggingFace Transformers, TinyLLaMA, and TextSETTR.
+## Acknowledgments  
+Special thanks to **Prof. Dr Archit Parnami** for our project guidance.
