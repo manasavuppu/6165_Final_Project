@@ -15,7 +15,7 @@ To build an AI assistant capable of generating emotionally resonant, style-align
 ├── 📁 baselineModels/ # Short form text models GPT-2, BART, and T5 
 ├── 📁 finalModels/ # Long form text models TinyLlama, Meta Llama, Mistral
 ├── 📁 preprocessing/ # Scripts and notebooks for data cleaning, OCR, tagging
-├── 📁 presentation/ # Final project slides, diagrams, and visual materials
+├── 📁 presentation/ # Final project presentation
 ├── 📁 report/ # Final written report ``` </pre>
 
 
